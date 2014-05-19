@@ -1,4 +1,4 @@
-package com.foodit.adam.service.test;
+
 
 import static org.junit.Assert.*;
 
