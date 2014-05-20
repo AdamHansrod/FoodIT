@@ -55,7 +55,7 @@
 		</div>
 		<div class="panel panel-default">
 		  <div class="panel-heading">
-		    <h3 class="panel-title">3.The most frequently ordered meals on FOODit Platform<</h3>
+		    <h3 class="panel-title">3.The most frequently ordered meals on FOODit Platform</h3>
 		  </div>
 		  <div class="panel-body">
 		    <ul class="list-group">
