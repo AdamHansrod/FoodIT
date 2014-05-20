@@ -3,12 +3,17 @@ package adam.test;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 
 import com.foodit.adam.model.Meal;
+import com.foodit.adam.model.MealPopularity;
 import com.foodit.adam.service.FoodITService;
 import com.foodit.adam.service.FoodITServiceImp;
 import com.foodit.test.sample.controller.DataLoadController;
@@ -35,8 +40,13 @@ public class FoodITServiceTest {
 	}
 	
 	@Test
-	public void testGetMostOrderedCategory() {
-		Meal meal = foodITService.getMostOrderedMeal();
+	public void testGetMostOrderedMeal() {
+		Meal meal = foodITService.getMostOrderedMeal(RESTAURANT_NAME);
+		assertNotNull(meal);
+	}
+	@Test
+	public void testGetMostOrderedMeals() {
+		Collection<Meal> meal = foodITService.getAllPopularMeals();
 		assertNotNull(meal);
 	}
 }

@@ -17,8 +17,8 @@ public class FoodITController {
 	FoodITService fs = new FoodITServiceImp();
     public JsonView viewStats() {
         Map<String, Object> model = new HashMap<String, Object>();
-        model.put("mostPopularMeal", fs.getMostOrderedMeal());
+        model.put("PopularMeals", fs.getAllPopularMeals());
         return new JsonView(model);
     }
-    
+        
 }
