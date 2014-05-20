@@ -3,12 +3,16 @@ package adam.test;
 
 import static org.junit.Assert.*;
 
+import java.math.BigDecimal;
+import java.util.Collection;
 import java.util.List;
 
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 
+import com.foodit.adam.model.Meal;
+import com.foodit.adam.model.Menu;
 import com.foodit.adam.model.Order;
 import com.foodit.adam.service.RestaurantService;
 import com.foodit.test.sample.controller.DataLoadController;
@@ -31,6 +35,11 @@ public class RestaurantServiceTest {
 		DataLoadController dataLoadController = new DataLoadController();
 		dataLoadController.load();
 		restaurantService = new RestaurantService();
+		try {
+		    Thread.sleep(2000);//make sure the data is written in time otherwise some tests will randomly fail. Silly eventual consistenancy.
+		} catch(InterruptedException ex) {
+		    Thread.currentThread().interrupt();
+		}
 	}
 
 	@Test
@@ -49,9 +58,26 @@ public class RestaurantServiceTest {
 
 	@Test
 	public void testGetOrders() {
-		List<Order> orders = restaurantService.getOrders(RESTAURANT_NAME);
+		Collection<Order> orders = restaurantService.getOrders(RESTAURANT_NAME);
 		assertNotNull(orders);
 		assertTrue(orders.size() > 0);
 	}
-
+	
+	@Test
+	public void testGetTotalSales() {
+		BigDecimal total = restaurantService.getTotalSales(RESTAURANT_NAME);
+		assertTrue(total.intValue() > 0);
+	}
+	
+	@Test
+	public void testGetMenu() {
+		Menu menu = restaurantService.getMenu(RESTAURANT_NAME);
+		assertNotNull(menu);
+	}
+	
+	@Test
+	public void testGetMeals() {
+		Collection<Meal> meal = restaurantService.getMeals(RESTAURANT_NAME);
+		assertNotNull(meal);
+	}
 }
