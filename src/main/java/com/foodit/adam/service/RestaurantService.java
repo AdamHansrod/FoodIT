@@ -21,6 +21,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.List;
+import com.google.gson.reflect.TypeToken;
+import java.lang.reflect.Type;
 
 import static com.googlecode.objectify.ObjectifyService.ofy;
 
@@ -42,7 +44,9 @@ public class RestaurantService {
 
 	public List<Order> getOrders(RestaurantData rd) {
 		Gson gson = new Gson();
-		return (List<Order>) gson.fromJson(rd.getOrdersJson().toString(), Order.class);
-	}
-
+		Type type = new TypeToken<List<Order>>(){}.getType();
+		String orderString = rd.getOrdersJson().getValue();
+		List<Order> orders = gson.fromJson(orderString, type );
+		return orders;
+	} 
 }

@@ -47,11 +47,11 @@ public class RestaurantServiceTest {
 		assertTrue(restaurant.getRestaurant().equals(RESTAURANT_NAME));
 	}
 
-//	@Test
-//	public void testGetOrders() {
-//		List<Order> orders = restaurantService.getOrders(RESTAURANT_NAME);
-//		assertNotNull(orders);
-//		assertTrue(orders.size() > 0);
-//	}
+	@Test
+	public void testGetOrders() {
+		List<Order> orders = restaurantService.getOrders(RESTAURANT_NAME);
+		assertNotNull(orders);
+		assertTrue(orders.size() > 0);
+	}
 
 }
