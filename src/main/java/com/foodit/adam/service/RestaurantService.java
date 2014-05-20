@@ -100,6 +100,8 @@ public class RestaurantService {
 			restaurantID = jObject.get("restaurantId").toString();////get the restaurantID
 			
 			//get the map of categories (e.g. kebab:type of kebabs available)
+			//This is because each restaurant can have different categories 
+			//so we have to take the long way round of dynamically dealing with the category json keys, rather than hardcoding (e.g. orders)
 		    Map<String,String> categoryMap = new HashMap<String,String>();
 		    Iterator menuIterator = menu.keys();
 		    while(menuIterator.hasNext()){
