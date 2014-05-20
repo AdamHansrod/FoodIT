@@ -1,7 +1,6 @@
 package com.foodit.adam.service;
 
 import com.foodit.adam.model.Meal;
-import com.foodit.adam.model.MealPopularity;
 import com.foodit.adam.model.Menu;
 import com.foodit.adam.model.Order;
 

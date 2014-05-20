@@ -13,7 +13,6 @@ import org.junit.Rule;
 import org.junit.Test;
 
 import com.foodit.adam.model.Meal;
-import com.foodit.adam.model.MealPopularity;
 import com.foodit.adam.service.FoodITService;
 import com.foodit.adam.service.FoodITServiceImp;
 import com.foodit.test.sample.controller.DataLoadController;
