@@ -51,5 +51,39 @@
 
     <p>Refer to the readme file for full test details.</p>
 
+	<div class="well">
+		Links to the api
+		
+	 	<ul>
+	 		<li> <p>1.Total number of orders for each restaurant</p>
+				<p>/restaurant/{restaurant}/order/total</p>
+		        <li><a href="/restaurant/bbqgrill/order/total">bbqgrill</a></li>
+		        <li><a href="/restaurant/butlersthaicafe/order/total">butlersthaicafe</a></li>
+		        <li><a href=/restaurant/jashanexquisiteindianfood/order/total">jashanexquisiteindianfood</a></li>
+		        <li><a href="/restaurant/newchinaexpress/order/total">newchinaexpress</a></li>
+	        </li>
+	        <li> <p>2.Total number of sales for each restaurant</p>
+				<p>/restaurant/{restaurant}/sale/total</p>
+		        <li><a href="/restaurant/bbqgrill/sale/total">bbqgrill</a></li>
+		        <li><a href="/restaurant/butlersthaicafe/sale/total">butlersthaicafe</a></li>
+		        <li><a href=/restaurant/jashanexquisiteindianfood/sale/total">jashanexquisiteindianfood</a></li>
+		        <li><a href="/restaurant/newchinaexpress/sale/total">newchinaexpress</a></li>
+	        </li>
+	         <li> <p>3.The most frequently ordered meals on FOODit Platform</p>
+				<p>/foodit/stats</p>
+		        <li><a href="/foodit/stats">foodit</a></li>
+	        </li>
+	           <li> <p>4.The most frequently ordered category for each restaurant</p>
+				<p>/restaurant/{restaurant}/stats</p>
+		        <li><a href="/restaurant/bbqgrill/stats">bbqgrill</a></li>
+		        <li><a href="/restaurant/butlersthaicafe/stats">butlersthaicafe</a></li>
+		        <li><a href=/restaurant/jashanexquisiteindianfood/stats">jashanexquisiteindianfood</a></li>
+		        <li><a href="/restaurant/newchinaexpress/stats">newchinaexpress</a></li>
+	        </li>
+	        
+
+	        
+	    </ul>
+    </div>
 
 </section>
