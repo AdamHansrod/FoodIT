@@ -19,6 +19,64 @@
 </header>
 <section class="container">
     <h2>Load Data</h2>
+    
+    <div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">1.Total number of orders for each restaurant</h3>
+		  </div>
+		  <div class="panel-body">
+		    <ul class="list-group">
+		 		<li class="list-group-item"> 
+					<p>/restaurant/{restaurant}/order/total</p> </li>
+			        <li class="list-group-item"><a href="/restaurant/bbqgrill/order/total">bbqgrill</a></li>
+			        <li class="list-group-item"><a href="/restaurant/butlersthaicafe/order/total">butlersthaicafe</a></li>
+			        <li class="list-group-item"><a href=/restaurant/jashanexquisiteindianfood/order/total">jashanexquisiteindianfood</a></li>
+			        <li class="list-group-item"><a href="/restaurant/newchinaexpress/order/total">newchinaexpress</a></li>
+			</ul>
+		  </div>
+		</div>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">2.Total number of sales for each restaurant</h3>
+		  </div>
+		  <div class="panel-body">
+		    <ul class="list-group">
+		 		<li class="list-group-item"> 
+					<p>/restaurant/{restaurant}/sale/total</p> </li>
+			       	<li class="list-group-item"><a href="/restaurant/bbqgrill/sale/total">bbqgrill</a></li>
+		       	 	<li class="list-group-item"><a href="/restaurant/butlersthaicafe/sale/total">butlersthaicafe</a></li>
+		        	<li class="list-group-item"><a href=/restaurant/jashanexquisiteindianfood/sale/total">jashanexquisiteindianfood</a></li>
+		        	<li class="list-group-item"><a href="/restaurant/newchinaexpress/sale/total">newchinaexpress</a></li>
+	        </ul>
+		  </div>
+		</div>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">3.The most frequently ordered meals on FOODit Platform<</h3>
+		  </div>
+		  <div class="panel-body">
+		    <ul class="list-group">
+		 		<li class="list-group-item"> 
+					<p>/foodit/stats</p> </li>
+			        <li class="list-group-item"><a href="/foodit/stats">foodit</a></li>
+			 </ul>
+		  </div>
+		</div>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">4.The most frequently ordered category for each restaurant</h3>
+		  </div>
+		  <div class="panel-body">
+		    <ul class="list-group">
+		 		<li class="list-group-item"> 
+					<p>/restaurant/{restaurant}/stats</p> </li>
+			     	<li class="list-group-item"><a href="/restaurant/bbqgrill/stats">bbqgrill</a></li>
+		        	<li class="list-group-item"><a href="/restaurant/butlersthaicafe/stats">butlersthaicafe</a></li>
+		        	<li class="list-group-item"><a href=/restaurant/jashanexquisiteindianfood/stats">jashanexquisiteindianfood</a></li>
+		        	<li class="list-group-item"><a href="/restaurant/newchinaexpress/stats">newchinaexpress</a></li>
+	       </ul>
+		  </div>
+		</div>
   <p>
       To start the test you need to click the load data button to setup the restaurant configuration data. <div><a class="btn btn-primary" href="/load/">Load Data</a></div>
   </p>
@@ -50,40 +108,9 @@
     </div>
 
     <p>Refer to the readme file for full test details.</p>
-
-	<div class="well">
-		Links to the api
+	<p>Links to the api</p>
 		
-	 	<ul>
-	 		<li> <p>1.Total number of orders for each restaurant</p>
-				<p>/restaurant/{restaurant}/order/total</p>
-		        <li><a href="/restaurant/bbqgrill/order/total">bbqgrill</a></li>
-		        <li><a href="/restaurant/butlersthaicafe/order/total">butlersthaicafe</a></li>
-		        <li><a href=/restaurant/jashanexquisiteindianfood/order/total">jashanexquisiteindianfood</a></li>
-		        <li><a href="/restaurant/newchinaexpress/order/total">newchinaexpress</a></li>
-	        </li>
-	        <li> <p>2.Total number of sales for each restaurant</p>
-				<p>/restaurant/{restaurant}/sale/total</p>
-		        <li><a href="/restaurant/bbqgrill/sale/total">bbqgrill</a></li>
-		        <li><a href="/restaurant/butlersthaicafe/sale/total">butlersthaicafe</a></li>
-		        <li><a href=/restaurant/jashanexquisiteindianfood/sale/total">jashanexquisiteindianfood</a></li>
-		        <li><a href="/restaurant/newchinaexpress/sale/total">newchinaexpress</a></li>
-	        </li>
-	         <li> <p>3.The most frequently ordered meals on FOODit Platform</p>
-				<p>/foodit/stats</p>
-		        <li><a href="/foodit/stats">foodit</a></li>
-	        </li>
-	           <li> <p>4.The most frequently ordered category for each restaurant</p>
-				<p>/restaurant/{restaurant}/stats</p>
-		        <li><a href="/restaurant/bbqgrill/stats">bbqgrill</a></li>
-		        <li><a href="/restaurant/butlersthaicafe/stats">butlersthaicafe</a></li>
-		        <li><a href=/restaurant/jashanexquisiteindianfood/stats">jashanexquisiteindianfood</a></li>
-		        <li><a href="/restaurant/newchinaexpress/stats">newchinaexpress</a></li>
-	        </li>
-	        
-
-	        
-	    </ul>
-    </div>
+		
+	 	
 
 </section>
