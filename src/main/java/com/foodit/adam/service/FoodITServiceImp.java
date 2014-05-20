@@ -11,11 +11,11 @@ import java.util.Iterator;
 
 public class FoodITServiceImp implements FoodITService {
 	
-	public Integer getMostOrderedMealID() {
+	public Meal getMostOrderedMeal() {
 		Collection<Order> allOrders = getAllOrders();
 		
 		Iterator it = allOrders.iterator();
-		
+		Meal mostOrderedMeal = new Meal();
 		Integer mostCommonOrderID = 0;
 		Integer counter= 0;
 		HashMap<Integer, Integer> mealOccurrence = new HashMap<Integer, Integer>();
@@ -35,6 +35,7 @@ public class FoodITServiceImp implements FoodITService {
 					//if it's highest number of occurrence then set it
 					//doing this here, so we can just do one pass.
 					if (numberOfMealOccurances > counter && mealID !=null) {
+						mostOrderedMeal = meal;
 						mostCommonOrderID = mealID;
 						counter = numberOfMealOccurances;
 					}
@@ -44,7 +45,7 @@ public class FoodITServiceImp implements FoodITService {
 				}
 			}
 		}		
-		return mostCommonOrderID;
+		return mostOrderedMeal;
 	}
 	
 	public Collection<Order> getAllOrders(){
