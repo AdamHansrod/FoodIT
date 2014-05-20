@@ -10,7 +10,7 @@ import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 
 public class Meal {
-	String id;
+	Integer id;
 	String name;
 	String description;
 	String category;
@@ -18,7 +18,7 @@ public class Meal {
 	Collection<MealOption> mealTypeOptions;
 	BigDecimal startingFromPrice;
 	
-	public Meal(String id, String name, String description, String category,
+	public Meal(Integer id, String name, String description, String category,
 			HashMap<String, BigDecimal> sizeAndPrice,
 			Collection<MealOption> mealTypeOptions, BigDecimal startingFromPrice) {
 		super();
@@ -30,10 +30,10 @@ public class Meal {
 		this.mealTypeOptions = mealTypeOptions;
 		this.startingFromPrice = startingFromPrice;
 	}
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getName() {
