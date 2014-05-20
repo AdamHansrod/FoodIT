@@ -4,6 +4,7 @@ import com.foodit.adam.model.Meal;
 import com.foodit.adam.model.Order;
 import com.foodit.test.sample.controller.RestaurantData;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -33,7 +34,7 @@ public class FoodITService {
 					
 					//if it's highest number of occurrence then set it
 					//doing this here, so we can just do one pass.
-					if (numberOfMealOccurances > counter) {
+					if (numberOfMealOccurances > counter && mealID !=null) {
 						mostCommonOrderID = mealID;
 						counter = numberOfMealOccurances;
 					}
@@ -49,7 +50,7 @@ public class FoodITService {
 	public Collection<Order> getAllOrders(){
 		RestaurantService rs = new RestaurantService();
 		Collection<RestaurantData> restaurantData = rs.getRestaurants();
-		Collection<Order> allOrders = null;
+		Collection<Order> allOrders = new ArrayList<Order>();
 		for(RestaurantData restaurant: restaurantData) {
 			Collection<Order> restaurantOrders = rs.getOrders(restaurant);
 			allOrders.addAll(restaurantOrders);

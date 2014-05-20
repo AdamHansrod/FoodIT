@@ -17,19 +17,11 @@ public class Meal {
 	HashMap<String,BigDecimal> sizeAndPrice;
 	Collection<MealOption> mealTypeOptions;
 	BigDecimal startingFromPrice;
-	
-	public Meal(Integer id, String name, String description, String category,
-			HashMap<String, BigDecimal> sizeAndPrice,
-			Collection<MealOption> mealTypeOptions, BigDecimal startingFromPrice) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.description = description;
-		this.category = category;
-		this.sizeAndPrice = sizeAndPrice;
-		this.mealTypeOptions = mealTypeOptions;
-		this.startingFromPrice = startingFromPrice;
-	}
+	BigDecimal total ;
+	BigDecimal unitPrice;
+	BigDecimal price;
+	Integer quantity;
+	boolean promotion;
 	public Integer getId() {
 		return id;
 	}
@@ -72,5 +64,36 @@ public class Meal {
 	public void setStartingFromPrice(BigDecimal startingFromPrice) {
 		this.startingFromPrice = startingFromPrice;
 	}
+	public BigDecimal getTotal() {
+		return total;
+	}
+	public void setTotal(BigDecimal total) {
+		this.total = total;
+	}
+	public BigDecimal getUnitPrice() {
+		return unitPrice;
+	}
+	public void setUnitPrice(BigDecimal unitPrice) {
+		this.unitPrice = unitPrice;
+	}
+	public BigDecimal getPrice() {
+		return price;
+	}
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
+	public Integer getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
+	}
+	public boolean isPromotion() {
+		return promotion;
+	}
+	public void setPromotion(boolean promotion) {
+		this.promotion = promotion;
+	}
+	
 	
 }

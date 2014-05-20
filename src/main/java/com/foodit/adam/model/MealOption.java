@@ -11,6 +11,7 @@ import com.googlecode.objectify.annotation.Id;
 @Entity
 public class MealOption {
 	String name;
+	String value;
 	boolean multiSelect;
 	boolean dropDown;
 	List<Option> options;
@@ -19,6 +20,12 @@ public class MealOption {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public String getValue() {
+		return value;
+	}
+	public void setValue(String value) {
+		this.value = value;
 	}
 	public boolean isMultiSelect() {
 		return multiSelect;
