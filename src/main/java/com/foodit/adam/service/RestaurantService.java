@@ -3,56 +3,28 @@ package com.foodit.adam.service;
 import com.foodit.adam.model.Meal;
 import com.foodit.adam.model.Menu;
 import com.foodit.adam.model.Order;
-import com.foodit.adam.tools.*;
 import com.foodit.test.sample.controller.RestaurantData;
-import com.google.appengine.api.datastore.Category;
-import com.google.appengine.labs.repackaged.com.google.common.collect.Lists;
 import com.google.appengine.labs.repackaged.org.json.JSONException;
 import com.google.appengine.labs.repackaged.org.json.JSONObject;
-import com.google.cloud.sql.jdbc.GoogleDataSource;
-import com.google.common.io.Resources;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import com.googlecode.objectify.Key;
-import com.threewks.thundr.http.ContentType;
-import com.threewks.thundr.http.HttpSupport;
-import com.threewks.thundr.logger.Logger;
-import com.threewks.thundr.view.jsp.JspView;
-import com.threewks.thundr.view.string.StringView;
 
-import org.apache.commons.io.IOUtils;
-
-import javax.naming.ldap.Rdn;
-import javax.servlet.http.HttpServletResponse;
-
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.math.BigDecimal;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Set;
 
 import com.google.gson.reflect.TypeToken;
 
-import java.lang.reflect.Array;
 import java.lang.reflect.Type;
 
 import static com.googlecode.objectify.ObjectifyService.ofy;
 
 public class RestaurantService {
 
-	public List<RestaurantData> getRestaurants() {
+	public Collection<RestaurantData> getRestaurants() {
 		return ofy().load().type(RestaurantData.class).list();
 	}
 
@@ -142,27 +114,26 @@ public class RestaurantService {
 	}
 	
 	public String getMostOrderedCategory(String restaurant) {
+		
 		Collection<Meal> meals = getMeals(restaurant);
+		String mostCommonCategory= "";
+		Integer categoryValue= 0;
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
 		for(Meal meal:meals) {//get the number of times a category appears
 			String category = meal.getCategory();
 			if (map.containsKey(category)) {
-				map.put(category, map.get(category)+1 );
+				Integer val =  map.get(category)+1;
+				map.put(category, val);
+				
+				if (val > categoryValue) {
+			    	mostCommonCategory = category;
+			    	categoryValue = val;
+			    }
+				
 			}else{
 				map.put(category, 1);
 			}
-		}
-		Iterator it = map.entrySet().iterator();
-		String mostCommonCategory= "";
-		Integer categoryValue= 0;
-		while (it.hasNext()) {//work out which most commonly appears		    
-	    	String  key = (String)  it.next();
-		    Integer val = (Integer) map.get(key);
-		    if (val > categoryValue) {
-		    	mostCommonCategory = key;
-		    	categoryValue = val;
-		    }
-		}
+		}		
 		return mostCommonCategory;
 	}
 	
