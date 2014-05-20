@@ -1,5 +1,6 @@
 package com.foodit.adam.model;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import com.google.appengine.api.datastore.Text;
@@ -13,7 +14,7 @@ public class Order {
 	String created;
 	String storeId;
 	String storeName;
-	double totalValue;
+	BigDecimal totalValue;
 	List<Meal> lineItems;
 	String status;
 	String timeZoneId;
@@ -29,7 +30,7 @@ public class Order {
 	
 	public Order(String recVersion, String orderId,
 			String easyOrderNum, String created, String storeId,
-			String storeName, double totalValue, List<Meal> lineItems,
+			String storeName, BigDecimal totalValue, List<Meal> lineItems,
 			String status, String timeZoneId, String collectionType,
 			String paymentType, String addressDisplay, String contactNumber,
 			String domain, String currencyDisplay, String commissionRate,
@@ -92,10 +93,10 @@ public class Order {
 	public void setStoreName(String storeName) {
 		this.storeName = storeName;
 	}
-	public double getTotalValue() {
+	public BigDecimal getTotalValue() {
 		return totalValue;
 	}
-	public void setTotalValue(double totalValue) {
+	public void setTotalValue(BigDecimal totalValue) {
 		this.totalValue = totalValue;
 	}
 	public List<Meal> getLineItems() {

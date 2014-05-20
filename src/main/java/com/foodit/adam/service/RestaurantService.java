@@ -19,9 +19,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.BigDecimal;
 import java.net.URL;
 import java.util.List;
+
 import com.google.gson.reflect.TypeToken;
+
 import java.lang.reflect.Type;
 
 import static com.googlecode.objectify.ObjectifyService.ofy;
@@ -50,11 +53,11 @@ public class RestaurantService {
 		return orders;
 	}
 	
-	public double getTotalSales(String restaurant) {
+	public BigDecimal getTotalSales(String restaurant) {
 		List<Order> orders = getOrders(restaurant);
-		double total = 0;
-		for(Order order:orders) {
-			total += order.getTotalValue();
+		BigDecimal total = new BigDecimal(0);
+		for(Order order:orders) {		    
+			total.add(order.getTotalValue());
 		}
 		return total;
 	}
