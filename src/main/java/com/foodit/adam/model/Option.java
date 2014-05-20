@@ -13,6 +13,8 @@ public class Option {
 	String label;
 	HashMap<String,BigDecimal> pricesForSize;
 	
+	public Option() {};
+	
 	public Option(String label, HashMap<String, BigDecimal> pricesForSize) {
 		super();
 		this.label = label;

@@ -28,6 +28,8 @@ public class Order {
 	String referenceNumber;
 	String receiptLogoUrl;
 	
+	public Order() {};
+	
 	public Order(String recVersion, String orderId,
 			String easyOrderNum, String created, String storeId,
 			String storeName, BigDecimal totalValue, List<Meal> lineItems,

@@ -8,24 +8,24 @@ import com.foodit.test.sample.controller.RestaurantData;
 import java.math.BigDecimal;
 import java.util.Collection;
 
-public abstract interface RestaurantService {
+public interface RestaurantService {
 
-	public abstract Collection<RestaurantData> getRestaurants();
+	public Collection<RestaurantData> getRestaurants();
 
-	public abstract RestaurantData getRestaurant(String name);
+	public RestaurantData getRestaurant(String name);
 
-	public abstract Collection<Order> getOrders(String restaurant);
+	public Collection<Order> getOrders(String restaurant);
 
-	public abstract Collection<Order> getOrders(RestaurantData rd);
+	public Collection<Order> getOrders(RestaurantData rd);
 	
-	public abstract BigDecimal getTotalSales(String restaurant);
+	public BigDecimal getTotalSales(String restaurant);
 	
-	public abstract Menu getMenu(String restaurant);
+	public Menu getMenu(String restaurant);
 	
-	public abstract Menu getMenu(RestaurantData rd);
+	public Menu getMenu(RestaurantData rd);
 	
-	public abstract Collection<Meal> getMeals(String restaurant);
+	public Collection<Meal> getMeals(String restaurant);
 	
-	public abstract String getMostOrderedCategory(String restaurant);
+	public String getMostOrderedCategory(String restaurant);
 	
 }

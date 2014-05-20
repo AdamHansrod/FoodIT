@@ -1,3 +1,5 @@
+import com.foodit.adam.controller.FoodITController;
+import com.foodit.adam.controller.RestaurantController;
 import com.foodit.test.sample.controller.DataLoadController;
 import com.threewks.thundr.action.method.MethodAction;
 import com.threewks.thundr.route.Route;
@@ -30,5 +32,16 @@ public class ApplicationRoutes {
 		// Instructions
 		routes.addRoute(new Route(GET, "/", Names.ViewInstructions), new MethodAction(DataLoadController.class, "instructions"));
 		routes.addRoute(new Route(GET, "/restaurant/{restaurant}/download", Names.ViewData), new MethodAction(DataLoadController.class, "viewData"));
+		
+		//get restaurants total orders, but call it order in-case we ever want to restfully get/post orders individually
+		routes.addRoute(new Route(GET, "/restaurant/{restaurant}/order/total", null), new MethodAction(RestaurantController.class, "viewOrderTotal"));
+		//get restaurants total sales, but call it sale in-case we ever want to restfully get/post a sale individually
+		routes.addRoute(new Route(GET, "/restaurant/{restaurant}/sale/total", null), new MethodAction(RestaurantController.class, "viewSaleTotal"));
+		//get restaurants stats GET stats POST stats? sounds pretty nifty. #getstatspoststats
+		routes.addRoute(new Route(GET, "/restaurant/{restaurant}/stats", null), new MethodAction(RestaurantController.class, "viewStats"));	
+
+		//get foodit stats
+		routes.addRoute(new Route(GET, "/foodit/stats", null), new MethodAction(FoodITController.class, "viewStats"));	
+
 	}
 }

@@ -16,6 +16,8 @@ public class Menu {
 	Collection<Meal> meals;
 	String restaurantId;
 	
+	public Menu() {};
+	
 	public Menu(Collection<Meal> menu, String restaurantId) {
 		super();
 		this.meals = menu;

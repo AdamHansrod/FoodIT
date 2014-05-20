@@ -15,6 +15,18 @@ public class MealOption {
 	boolean multiSelect;
 	boolean dropDown;
 	List<Option> options;
+	
+	public MealOption() {};
+	
+	public MealOption(String name, String value, boolean multiSelect,
+			boolean dropDown, List<Option> options) {
+		super();
+		this.name = name;
+		this.value = value;
+		this.multiSelect = multiSelect;
+		this.dropDown = dropDown;
+		this.options = options;
+	}
 	public String getName() {
 		return name;
 	}

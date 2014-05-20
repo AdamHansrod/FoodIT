@@ -28,7 +28,8 @@ public class SizePrice {
 	String referenceNumber;
 	String receiptLogoUrl;
 	
-
+	public SizePrice() {};
+	
 	public String getRecVersion() {
 		return recVersion;
 	}

@@ -5,10 +5,10 @@ import com.foodit.adam.model.Order;
 
 import java.util.Collection;
 
-public abstract interface FoodITService {
+public interface FoodITService {
 	
-	public abstract Meal getMostOrderedMeal(); 
+	public Meal getMostOrderedMeal(); 
 	
-	public abstract Collection<Order> getAllOrders();
+	public Collection<Order> getAllOrders();
 
 }

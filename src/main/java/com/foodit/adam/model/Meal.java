@@ -22,6 +22,28 @@ public class Meal {
 	BigDecimal price;
 	Integer quantity;
 	boolean promotion;
+	public Meal() {};
+	
+	public Meal(Integer id, String name, String description, String category,
+			HashMap<String, BigDecimal> sizeAndPrice,
+			Collection<MealOption> mealTypeOptions,
+			BigDecimal startingFromPrice, BigDecimal total,
+			BigDecimal unitPrice, BigDecimal price, Integer quantity,
+			boolean promotion) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.description = description;
+		this.category = category;
+		this.sizeAndPrice = sizeAndPrice;
+		this.mealTypeOptions = mealTypeOptions;
+		this.startingFromPrice = startingFromPrice;
+		this.total = total;
+		this.unitPrice = unitPrice;
+		this.price = price;
+		this.quantity = quantity;
+		this.promotion = promotion;
+	}
 	public Integer getId() {
 		return id;
 	}
