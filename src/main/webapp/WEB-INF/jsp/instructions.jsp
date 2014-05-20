@@ -19,7 +19,10 @@
 </header>
 <section class="container">
     <h2>Load Data</h2>
-    
+     <p>
+      To start the test you need to click the load data button to setup the restaurant configuration data. <div><a class="btn btn-primary" href="/load/">Load Data</a></div>
+  	</p>
+    <div class="well">
     <div class="panel panel-default">
 		  <div class="panel-heading">
 		    <h3 class="panel-title">1.Total number of orders for each restaurant</h3>
@@ -77,10 +80,7 @@
 	       </ul>
 		  </div>
 		</div>
-  <p>
-      To start the test you need to click the load data button to setup the restaurant configuration data. <div><a class="btn btn-primary" href="/load/">Load Data</a></div>
-  </p>
-
+	</div>
  <p>
      This will load json data for following four restaurants:
      <ul>
