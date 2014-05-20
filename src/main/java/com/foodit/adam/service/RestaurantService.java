@@ -48,5 +48,15 @@ public class RestaurantService {
 		String orderString = rd.getOrdersJson().getValue();
 		List<Order> orders = gson.fromJson(orderString, type );
 		return orders;
-	} 
+	}
+	
+	public double getTotalSales(String restaurant) {
+		List<Order> orders = getOrders(restaurant);
+		double total = 0;
+		for(Order order:orders) {
+			total += order.getTotalValue();
+		}
+		return total;
+	}
+	
 }

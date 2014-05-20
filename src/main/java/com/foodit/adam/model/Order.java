@@ -13,7 +13,7 @@ public class Order {
 	String created;
 	String storeId;
 	String storeName;
-	String totalValue;
+	double totalValue;
 	List<Meal> lineItems;
 	String status;
 	String timeZoneId;
@@ -29,7 +29,7 @@ public class Order {
 	
 	public Order(String recVersion, String orderId,
 			String easyOrderNum, String created, String storeId,
-			String storeName, String totalValue, List<Meal> lineItems,
+			String storeName, double totalValue, List<Meal> lineItems,
 			String status, String timeZoneId, String collectionType,
 			String paymentType, String addressDisplay, String contactNumber,
 			String domain, String currencyDisplay, String commissionRate,
@@ -92,10 +92,10 @@ public class Order {
 	public void setStoreName(String storeName) {
 		this.storeName = storeName;
 	}
-	public String getTotalValue() {
+	public double getTotalValue() {
 		return totalValue;
 	}
-	public void setTotalValue(String totalValue) {
+	public void setTotalValue(double totalValue) {
 		this.totalValue = totalValue;
 	}
 	public List<Meal> getLineItems() {
