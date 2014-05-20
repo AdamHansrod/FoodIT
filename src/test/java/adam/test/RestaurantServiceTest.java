@@ -8,6 +8,7 @@ import java.util.Collection;
 import java.util.List;
 
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -36,7 +37,7 @@ public class RestaurantServiceTest {
 		dataLoadController.load();
 		restaurantService = new RestaurantService();
 		try {
-		    Thread.sleep(2000);//make sure the data is written in time otherwise some tests will randomly fail. Silly eventual consistenancy.
+		    Thread.sleep(1000);//make sure the data is written in time otherwise some tests will randomly fail. Silly eventual consistenancy.
 		} catch(InterruptedException ex) {
 		    Thread.currentThread().interrupt();
 		}
@@ -44,7 +45,7 @@ public class RestaurantServiceTest {
 
 	@Test
 	public void testRetrievingAllRestarurants() {
-		List<RestaurantData> rd = restaurantService.getRestaurants();
+		Collection<RestaurantData> rd = restaurantService.getRestaurants();
 		assertNotNull(restaurantService.getRestaurants());
 		assertTrue(rd.size() >= 0);
 	}
@@ -79,5 +80,11 @@ public class RestaurantServiceTest {
 	public void testGetMeals() {
 		Collection<Meal> meal = restaurantService.getMeals(RESTAURANT_NAME);
 		assertNotNull(meal);
+	}
+	
+	@Test
+	public void testGetMostOrderedCategory() {
+		String category = restaurantService.getMostOrderedCategory(RESTAURANT_NAME);
+		assertNotNull(category);
 	}
 }
