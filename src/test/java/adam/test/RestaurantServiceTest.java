@@ -15,6 +15,7 @@ import com.foodit.adam.model.Meal;
 import com.foodit.adam.model.Menu;
 import com.foodit.adam.model.Order;
 import com.foodit.adam.service.RestaurantService;
+import com.foodit.adam.service.RestaurantServiceImp;
 import com.foodit.test.sample.controller.DataLoadController;
 import com.foodit.test.sample.controller.RestaurantData;
 
@@ -25,7 +26,7 @@ public class RestaurantServiceTest{
     public SetupObjectify setupObjectify = new SetupObjectify(RestaurantData.class);
 
 	static final String RESTAURANT_NAME = "bbqgrill";
-	static final RestaurantService restaurantService  = new RestaurantService();
+	static final RestaurantService restaurantService  = new RestaurantServiceImp();
 	
 	@Before
 	public void setUp() throws Exception {

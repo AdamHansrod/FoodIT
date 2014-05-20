@@ -8,7 +8,9 @@ import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 
+import com.foodit.adam.model.Meal;
 import com.foodit.adam.service.FoodITService;
+import com.foodit.adam.service.FoodITServiceImp;
 import com.foodit.test.sample.controller.DataLoadController;
 import com.foodit.test.sample.controller.RestaurantData;
 
@@ -19,7 +21,7 @@ public class FoodITServiceTest {
     public SetupObjectify setupObjectify = new SetupObjectify(RestaurantData.class);
     
 	static final String RESTAURANT_NAME = "bbqgrill";
-	static final FoodITService foodITService = new FoodITService();
+	static final FoodITService foodITService = new FoodITServiceImp();
 
 	@Before
 	public  void setUp() throws Exception {
@@ -34,7 +36,7 @@ public class FoodITServiceTest {
 	
 	@Test
 	public void testGetMostOrderedCategory() {
-		Integer id = foodITService.getMostOrderedMealID();
-		assertNotNull(id);
+		Meal meal = foodITService.getMostOrderedMeal();
+		assertNotNull(meal);
 	}
 }
