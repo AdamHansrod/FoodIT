@@ -27,7 +27,9 @@ public class RestaurantServiceTest{
 
 	static final String RESTAURANT_NAME = "bbqgrill";
 	static final RestaurantService restaurantService  = new RestaurantServiceImp();
-	
+	//doing this before makes it run before every test which is massive overhead, 
+	//however there are problems when running it as @BeforeClass,
+	//as objectify doesn't get it's entities setup correctly
 	@Before
 	public void setUp() throws Exception {
 		DataLoadController dataLoadController = new DataLoadController();

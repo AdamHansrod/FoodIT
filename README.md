@@ -2,10 +2,14 @@
 
 Create the set of REST API's that can answer the following questions:
 
-  1.	Total number of orders for each restaurant
-  2.	Total amount (money) of sales per restaurant
-  3.	The most frequently ordered meals on FOODit Platform
-  4.	The most frequently ordered category for each restaurant
+1.Total number of orders for each restaurant
+/restaurant/{restaurant}/order/total
+2. Total amount (money) of sales per restaurant
+/restaurant/{restaurant}/sale/total
+3.The most frequently ordered meals on FOODit Platform
+/restaurant/{restaurant}/stats
+4.The most frequently ordered category for each restaurant
+/foodit/stats
 
 It is expected that you will write unit tests.
 
