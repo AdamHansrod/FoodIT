@@ -33,7 +33,7 @@
 					<p>/restaurant/{restaurant}/order/total</p> </li>
 			        <li class="list-group-item"><a href="/restaurant/bbqgrill/order/total">bbqgrill</a></li>
 			        <li class="list-group-item"><a href="/restaurant/butlersthaicafe/order/total">butlersthaicafe</a></li>
-			        <li class="list-group-item"><a href=/restaurant/jashanexquisiteindianfood/order/total">jashanexquisiteindianfood</a></li>
+			        <li class="list-group-item"><a href="/restaurant/jashanexquisiteindianfood/order/total">jashanexquisiteindianfood</a></li>
 			        <li class="list-group-item"><a href="/restaurant/newchinaexpress/order/total">newchinaexpress</a></li>
 			</ul>
 		  </div>
@@ -48,7 +48,7 @@
 					<p>/restaurant/{restaurant}/sale/total</p> </li>
 			       	<li class="list-group-item"><a href="/restaurant/bbqgrill/sale/total">bbqgrill</a></li>
 		       	 	<li class="list-group-item"><a href="/restaurant/butlersthaicafe/sale/total">butlersthaicafe</a></li>
-		        	<li class="list-group-item"><a href=/restaurant/jashanexquisiteindianfood/sale/total">jashanexquisiteindianfood</a></li>
+		        	<li class="list-group-item"><a href="/restaurant/jashanexquisiteindianfood/sale/total">jashanexquisiteindianfood</a></li>
 		        	<li class="list-group-item"><a href="/restaurant/newchinaexpress/sale/total">newchinaexpress</a></li>
 	        </ul>
 		  </div>
@@ -75,7 +75,7 @@
 					<p>/restaurant/{restaurant}/stats</p> </li>
 			     	<li class="list-group-item"><a href="/restaurant/bbqgrill/stats">bbqgrill</a></li>
 		        	<li class="list-group-item"><a href="/restaurant/butlersthaicafe/stats">butlersthaicafe</a></li>
-		        	<li class="list-group-item"><a href=/restaurant/jashanexquisiteindianfood/stats">jashanexquisiteindianfood</a></li>
+		        	<li class="list-group-item"><a href="/restaurant/jashanexquisiteindianfood/stats">jashanexquisiteindianfood</a></li>
 		        	<li class="list-group-item"><a href="/restaurant/newchinaexpress/stats">newchinaexpress</a></li>
 	       </ul>
 		  </div>
