@@ -1,18 +1,14 @@
-# FOODit Test
+# FOODit Test Task
 
 Create the set of REST API's that can answer the following questions:
 
 1.Total number of orders for each restaurant
-/restaurant/{restaurant}/order/total
 
 2.Total amount (money) of sales per restaurant
-/restaurant/{restaurant}/sale/total
 
 3.The most frequently ordered meals on FOODit Platform
-/foodit/stats
 
 4.The most frequently ordered category for each restaurant
-/restaurant/{restaurant}/stats
 
 It is expected that you will write unit tests.
 
@@ -47,3 +43,17 @@ To expose the api's you can simple return a JsonView from your controller method
 http://3wks.github.io/thundr/thundr/views.html
 
 Happy coding :)
+
+## Solution
+
+1.Total number of orders for each restaurant
+/restaurant/{restaurant}/order/total
+
+2.Total amount (money) of sales per restaurant
+/restaurant/{restaurant}/sale/total
+
+3.The most frequently ordered meals on FOODit Platform
+/foodit/stats
+
+4.The most frequently ordered category for each restaurant
+/restaurant/{restaurant}/stats
